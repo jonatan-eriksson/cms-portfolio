@@ -10,6 +10,14 @@ module.exports = {
       gray: colors.trueGray,
       teal: colors.teal,
     },
+    container: {
+      screens: {
+        sm: "100%",
+        md: "100%",
+        lg: "100%",
+        xl: "1024px"
+      }
+    },
   },
   variants: {
     extend: {},
