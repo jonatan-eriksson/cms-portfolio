@@ -7,7 +7,6 @@ const Navbar = ({ title }: { title?: string }) => {
   const [menuItems, setMenuItems] = useState<any[]>([]);
 
   useEffect(() => {
-
     const fetchMenu = async () => {
       const res = await axios.get('wp-json/wp/v2/menu');
       const menuItems = res.data;

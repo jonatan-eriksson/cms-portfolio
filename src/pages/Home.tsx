@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const Home = () => {
   const [title, setTitle] = useState<string>("");
   const [description, setDescription] = useState<string>("");
-  const [image, setImage] = useState<any>({});
 
   useEffect(() => {
     const fetchPage = async () => {
@@ -15,7 +14,6 @@ const Home = () => {
 
       setTitle(page.acf.title);
       setDescription(page.acf.description);
-      setImage(page.acf.image);
     }
     fetchPage();
   }, []);
@@ -23,7 +21,7 @@ const Home = () => {
   return (
 
     <div className="self-center mx-auto">
-      <h1 className="font-semibold text-gray-200 text-4xl md:text-5xl lg:text-6xl pt-3">{title}</h1>
+      <h1 className="font-semibold text-gray-200 text-4xl md:text-5xl lg:text-6xl">{title}</h1>
       <p className="font-light text-gray-400 text-xl pt-3">{description}</p>
       <Link to="/contact" className="block sm:inline-block mt-12 py-3 px-10 font-semibold text-xl sm:text-2xl text-center sm:text-left text-teal-300 border border-teal-300 hover:bg-teal-300 hover:bg-opacity-10 transition-colors rounded">Let's talk!</Link>
     </div >
