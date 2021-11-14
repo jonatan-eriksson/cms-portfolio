@@ -12,16 +12,20 @@ const About = () => {
       console.log(page);
 
       setDescription(page.acf.description);
+
+      setLoading(false);
     }
     fetchPage();
   }, []);
 
   return (
     <div className="mt-6">
-      <h2 className="text-4xl font-medium text-gray-200 mb-5">About Me</h2>
-      <p className="text-gray-400">
-        {description}
-      </p>
+      {!loading && <>
+        <h2 className="text-4xl font-medium text-gray-200 mb-5">About Me</h2>
+        <p className="text-gray-400">
+          {description}
+        </p>
+      </>}
     </div >
   );
 }
