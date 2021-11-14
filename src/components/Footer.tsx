@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { VscGithubAlt, VscMail } from "react-icons/vsc";
 import { FiLinkedin } from "react-icons/fi";
 
-const Footer = () => {
+const Footer = ({ title }: { title?: string }) => {
 
   const [email, setEmail] = useState<string>("");
   const [githubUrl, setGithubUrl] = useState<string>("");
@@ -45,7 +45,7 @@ const Footer = () => {
       </div>
 
       <div>
-        &copy; {new Date().getFullYear()}
+        &copy; {new Date().getFullYear()} {title}
       </div>
     </footer >
   );
