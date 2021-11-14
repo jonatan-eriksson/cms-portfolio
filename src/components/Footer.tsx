@@ -26,21 +26,27 @@ const Footer = ({ title }: { title?: string }) => {
     <footer className="container mx-auto p-6 flex justify-between">
       <div className="">
         <ul className="flex space-x-5">
-          <li>
-            <a className="text-3xl hover:text-teal-300" href={`mailto:${email}`}>
-              <VscMail />
-            </a>
-          </li>
-          <li>
-            <a className="text-3xl hover:text-teal-300" href={githubUrl} target="_blank" rel="noopener noreferrer">
-              <VscGithubAlt />
-            </a>
-          </li>
-          <li>
-            <a className="text-3xl hover:text-teal-300" href={linkedinUrl} target="_blank" rel="noopener noreferrer">
-              <FiLinkedin />
-            </a>
-          </li>
+          {email && (
+            <li>
+              <a className="text-3xl hover:text-teal-300" href={`mailto:${email}`}>
+                <VscMail />
+              </a>
+            </li>
+          )}
+          {githubUrl && (
+            <li>
+              <a className="text-3xl hover:text-teal-300" href={githubUrl} target="_blank" rel="noopener noreferrer">
+                <VscGithubAlt />
+              </a>
+            </li>
+          )}
+          {linkedinUrl && (
+            <li>
+              <a className="text-3xl hover:text-teal-300" href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+                <FiLinkedin />
+              </a>
+            </li>
+          )}
         </ul>
       </div>
 
