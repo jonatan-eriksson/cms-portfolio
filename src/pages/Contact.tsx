@@ -29,15 +29,21 @@ const Contact = () => {
         <hr className="border-teal-300" />
       </div>
       <div className="flex justify-center gap-8 text-gray-300">
-        <a className="text-6xl hover:text-teal-300" href={`mailto:${email}`}>
-          <VscMail />
-        </a>
-        <a className="text-6xl hover:text-teal-300" href={githubUrl} target="_blank" rel="noopener noreferrer">
-          <VscGithubAlt />
-        </a>
-        <a className="text-6xl hover:text-teal-300" href={linkedinUrl} target="_blank" rel="noopener noreferrer">
-          <FiLinkedin />
-        </a>
+        {email && (
+          <a className="text-6xl hover:text-teal-300" href={`mailto:${email}`}>
+            <VscMail />
+          </a>
+        )}
+        {githubUrl && (
+          <a className="text-6xl hover:text-teal-300" href={githubUrl} target="_blank" rel="noopener noreferrer">
+            <VscGithubAlt />
+          </a>
+        )}
+        {linkedinUrl && (
+          <a className="text-6xl hover:text-teal-300" href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+            <FiLinkedin />
+          </a>
+        )}
       </div>
     </div >
   );
