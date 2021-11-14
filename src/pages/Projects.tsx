@@ -17,8 +17,8 @@ const Projects = () => {
 
 
   return (
-    <div className="self-cente mt-6">
-      <h2 className="text-gray-200 text-4xl mb-10">Projects</h2>
+    <div className="mt-6">
+      <h2 className="text-center text-gray-200 text-4xl mb-10">Projects</h2>
       <div className="flex flex-wrap gap-8 justify-evenly">
         {projects && projects.map((project: any) => (
           <ProjectItem key={project.id} project={project} />
